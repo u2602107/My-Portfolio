@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="main">
+      <div class="navbar">
+          <img src="pic/logo.jpeg" class="logo">
+
+          <ul>
+              <li><a href="#" onclick="loadSection('home')">HOME</a></li>
+              <li><a href="#" onclick="loadSection('about')">ABOUT</a></li>
+              <li><a href="#" onclick="loadSection('skills')">SKILLS</a></li>
+              <li><a href="#" onclick="loadSection('myworks')">MY WORKS</a></li>
+              <li><a href="#" onclick="loadSection('interactiveStory')">INTERACTIVE STORY</a></li>
+              <li><a href="#" onclick="loadSection('contact')">CONTACT</a></li>
+          </ul>
+      </div>
+
+      <div id="content">
+          <!-- Initial content (home section) -->
+          <div class="info">
+              <h3>Hi, I'm <span>Priyanka Ashetty</span>.</h3>
+              <h1><span>Dev</span>Ops <span>E</span>ngineer</h1>
+              <h3>"As a DevOps engineer, I specialize in automating and optimizing software <br>development and IT operations. My expertise ensures seamless integration, <br>efficient deployments, and robust system reliability for continuous delivery."</h3>
+              <a href="#">Hire Me</a>
+          </div>
+          <div class="image">
+              <img src="pic/girl.png" class="girl">
+          </div>
+          <div class="icons">
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+          </div>
+      </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Priyanka Ashetty. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+  <script>
+    function loadSection(section) {
+        const content = document.getElementById('content');
+        if (section === 'home') {
+            content.innerHTML = `
+                <div class="info">
+                    <h3>Hi, I'm <span>Priyanka Ashetty</span>.</h3>
+                    <h1><span>Dev</span>Ops <span>E</span>ngineer</h1>
+                    <h3>"As a DevOps engineer, I specialize in automating and optimizing software <br>development and IT operations. My expertise ensures seamless integration, <br>efficient deployments, and robust system reliability for continuous delivery."</h3>
+                    <a href="#">Hire Me</a>
+                </div>
+                <div class="image">
+                    <img src="pic/girl.png" class="girl">
+                </div>
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                </div>
+            `;
+        } else if (section === 'about') {
+            content.innerHTML = `
+                <section id="about">
+                    <div class="about-container">
+                        <h1>About Me</h1>
+                        <div class="about-container-box">
+                            
+                            <div class="about-information">
+                                <p>Pursuing a master’s degree in computer science, I am enthusiastic about applying my technical skills to real-world challenges. <br> My coursework and projects have equipped me with a strong foundation in programming, problem-solving, and collaboration. <br> With expertise in areas such as algorithms, data structures, and software development, I am prepared to tackle complex technical issues. <br> Eager to leverage my academic background and passion for innovation, I am excited to contribute to a dynamic professional environment. <br> I thrive in team settings and enjoy working on cutting-edge technologies, constantly seeking opportunities to expand my knowledge and make a meaningful impact in the field of computer science.</p>
+                            </div>
+
+                            <div class="about-img">
+                                <img src="pic/girl.avif" alt="Priyanka Ashetty">
+                            </div>
+                        </div>
+                        
+
+                        
+                        
+                    </div>
+                </section>
+            `;
+        } else if (section === 'skills') {
+            content.innerHTML = `
+                <section id="skills">
+                    <h2>My Skills</h2>
+                    <div class="skills-container">
+                        <div class="skills-column">
+                            <h3>Technical Skills</h3>
+                            <div class="skill">
+                                <span>AWS</span>
+                                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span>DevOps</span>
+                                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span>Python</span>
+                                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="skills-column">
+                            <h3>Professional Skills</h3>
+                            <div class="circular-skill">
+                                <div class="circle" data-percentage="90">90%</div>
+                                <span>Active Communication</span>
+                            </div>
+                            <div class="circular-skill">
+                                <div class="circle" data-percentage="75">75%</div>
+                                <span>Team Work</span>
+                            </div>
+                            <div class="circular-skill">
+                                <div class="circle" data-percentage="85">85%</div>
+                                <span>Critical Thinking</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `;
+        } else if (section === 'myworks') {
+            content.innerHTML = `
+                <section id="project">
+                    <h2>Python Microservices Application: Video to Audio Conversion</h2>
+                    <div class="project-description">
+                        <h3>Project Overview</h3>
+                        <p>Create a Python microservices application that converts video to audio and deploys it in the cloud AWS.</p>
+                        
+                        <h3>Roles & Responsibility</h3>
+                        <ol>
+                            <li>Developed a Python microservices application using Flask that converts video files to audio with the ffmpeg library.</li>
+                            <li>Deploy the application on AWS EC2 instances for processing, with videos uploaded to and audios stored in S3 buckets.</li>
+                            <li>Utilize AWS Lambda functions to trigger the conversion process upon file upload to S3.</li>
+                            <li>Implement AWS CloudFormation for infrastructure as code to automate the deployment.</li>
+                            <li>Used Docker containers to deploy our application.</li>
+                            <li>Used Kubernetes for managing containerized applications.</li>
+                            <li>Ensure security and scalability by configuring IAM roles, security groups, and auto-scaling policies.</li>
+                        </ol>
+                    </div>
+                </section>
+            `;
+        } else if (section === 'interactiveStory') {
+            content.innerHTML = `
+                <div id="story-container">
+                    <h1>Interactive Career Story</h1>
+                    <p id="story-text">Chapter 1: The Foundation<br>
+                    The story begins with you deciding to pursue a career in technology. You’re at the crossroads of choosing your major in college. Do you:</p>
+                    <button onclick="nextStep('computerScience')">Choose Computer Science.</button>
+                    <button onclick="nextStep('exploreField')">Explore another field.</button>
+                </div>
+            `;
+        } else if (section === 'contact') {
+            content.innerHTML = `
+                <section id="contact">
+                    <h2>Contact Me</h2>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <p>Email: contact@gmail.com</p>
+                            <p>Phone: 0123456789</p>
+                        </div>
+                        <div class="contact-form">
+                            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                                <input type="text" name="name" placeholder="Enter Your Name">
+                                <input type="email" name="_replyto" placeholder="Enter Your Email">
+                                <input type="text" name="subject" placeholder="Enter Your Subject">
+                                <textarea name="message" placeholder="Enter Your Message"></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+    }
+    
+    function nextStep(choice) {
+        const storyText = document.getElementById('story-text');
+        const storyContainer = document.getElementById('story-container');
+
+        if (choice === 'computerScience') {
+            storyText.innerHTML = `You chose Computer Science and begin your journey learning programming and algorithms.<br> 
+            Now, you're considering focusing on a specific area. Do you want to specialize in:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('devOps')">DevOps</button>
+                <button onclick="nextStep('dataScience')">Data Science</button>
+            `;
+        } else if (choice === 'exploreField') {
+            storyText.innerHTML = `You decide to explore different fields before committing. After some time, you're still drawn to technology. Do you:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('returnToTech')">Return to Computer Science.</button>
+                <button onclick="nextStep('chooseDifferentPath')">Choose a different path.</button>
+            `;
+        } else if (choice === 'devOps') {
+            storyText.innerHTML = `Specializing in DevOps, you learn about cloud computing, CI/CD, and infrastructure automation.<br>
+            You're about to start your first job. Do you want to work at a:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('startup')">Startup</button>
+                <button onclick="nextStep('corporation')">Corporation</button>
+            `;
+        } else if (choice === 'dataScience') {
+            storyText.innerHTML = `Specializing in Data Science, you dive into machine learning, data analysis, and visualization.<br>
+            You're offered a role as a data scientist. Do you accept the job at a:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('techCompany')">Tech Company</button>
+                <button onclick="nextStep('researchLab')">Research Lab</button>
+            `;
+        } else if (choice === 'returnToTech') {
+            storyText.innerHTML = `You return to Computer Science, knowing it's your true passion. You focus on building your skills in a specific area. Do you:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('focusOnCoding')">Focus on Coding</button>
+                <button onclick="nextStep('exploreTechTrends')">Explore Tech Trends</button>
+            `;
+        } else if (choice === 'chooseDifferentPath') {
+            storyText.innerHTML = `You chose a different path and discovered new passions. Eventually, you decide to blend your interests with technology.<br>
+            Do you:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('techAndArt')">Blend Technology with Art</button>
+                <button onclick="nextStep('techAndBusiness')">Blend Technology with Business</button>
+            `;
+        } else if (choice === 'startup') {
+            storyText.innerHTML = `At the startup, you're wearing many hats and learning rapidly. Your hard work leads to the launch of a successful product.<br>
+            You're now considering starting your own venture. Do you:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('startOwnBusiness')">Start your own business</button>
+                <button onclick="nextStep('stayWithCompany')">Stay with the company and grow</button>
+            `;
+        } else if (choice === 'corporation') {
+            storyText.innerHTML = `At the corporation, you gain deep expertise in DevOps and eventually lead a team. Your career is flourishing.<br>
+            You have the opportunity to transition into a leadership role or specialize further. Do you:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('leadershipRole')">Take the leadership role</button>
+                <button onclick="nextStep('specializeFurther')">Specialize further</button>
+            `;
+        } else if (choice === 'techCompany') {
+            storyText.innerHTML = `Working at a tech company, you develop cutting-edge AI models and work on exciting projects. You're now a well-recognized expert.<br>
+            Do you want to:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('publishResearch')">Publish your research</button>
+                <button onclick="nextStep('startConsulting')">Start consulting for other companies</button>
+            `;
+        } else if (choice === 'researchLab') {
+            storyText.innerHTML = `In the research lab, your work contributes to groundbreaking advancements in AI. You now have the opportunity to lead your own research team.<br>
+            Do you:`;
+            storyContainer.innerHTML += `
+                <button onclick="nextStep('leadResearchTeam')">Lead the research team</button>
+                <button onclick="nextStep('focusOnInnovation')">Focus on innovation and startups</button>
+
+            `;
+        }
+    }
+  </script>
+</body>
+</html>
